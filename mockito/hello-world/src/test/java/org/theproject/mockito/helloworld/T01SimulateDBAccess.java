@@ -14,7 +14,7 @@ import static org.assertj.core.api.Assertions.assertThat;
 import static org.mockito.Mockito.when;
 
 @ExtendWith(SpringExtension.class) // In JUnit 5, this has a similar effect to @RunWith(MockitoJUnitRunner.class) in JUnit 4
-class HelloWorldApplicationTests {
+class T01SimulateDBAccess {
 
     private static final String FIRST_NAME = "Barney";
 
