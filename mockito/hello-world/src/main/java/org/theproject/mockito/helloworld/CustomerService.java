@@ -24,4 +24,9 @@ public class CustomerService {
             return Optional.of(results.get(0));
         }
     }
+
+    public Optional<Customer> getCustomerWithFirstName(String firstName) {
+        Customer customer = customerDao.findWithFirstName(firstName);
+        return Optional.of(customer);
+    }
 }

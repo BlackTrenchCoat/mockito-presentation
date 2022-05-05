@@ -14,13 +14,6 @@ public class Customer {
         this.lastName = lastName;
     }
 
-    @Override
-    public String toString() {
-        return String.format(
-                "org.theproject.testcontainerspreso.Customer[id=%d, firstName='%s', lastName='%s']",
-                id, firstName, lastName);
-    }
-
     public long getId() {
         return id;
     }
@@ -45,4 +38,11 @@ public class Customer {
         this.lastName = lastName;
     }
 
+    @Override
+    public String toString() {
+        return "Customer{" +
+                "firstName='" + firstName + '\'' +
+                ", lastName='" + lastName + '\'' +
+                '}';
+    }
 }

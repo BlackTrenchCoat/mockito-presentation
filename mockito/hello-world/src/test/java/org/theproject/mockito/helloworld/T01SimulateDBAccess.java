@@ -13,6 +13,7 @@ import java.util.Optional;
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.mockito.Mockito.when;
 
+// Mock the DAO to test the service without accessing the database
 @ExtendWith(SpringExtension.class) // In JUnit 5, this has a similar effect to @RunWith(MockitoJUnitRunner.class) in JUnit 4
 class T01SimulateDBAccess {
 

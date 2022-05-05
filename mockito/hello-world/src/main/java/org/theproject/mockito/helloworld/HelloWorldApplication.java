@@ -29,6 +29,13 @@ public class HelloWorldApplication {
             } else {
                 System.out.println("There is no Snape");
             }
+
+            Optional<Customer> hermione = customerService.getCustomerWithFirstName("Hermione");
+            if (hermione.isPresent()) {
+                System.out.println(hermione.get());
+            } else {
+                System.out.println("There is no Hermione");
+            }
         }
     }
 

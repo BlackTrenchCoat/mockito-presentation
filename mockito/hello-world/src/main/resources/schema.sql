@@ -8,3 +8,4 @@ create table customers (
 
 insert into customers (first_name, last_name) values ('Harry', 'Potter');
 insert into customers (first_name, last_name) values ('Severus', 'Snape');
+insert into customers (first_name, last_name) values ('Hermione', 'Granger');

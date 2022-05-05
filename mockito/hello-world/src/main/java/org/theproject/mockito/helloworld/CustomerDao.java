@@ -12,11 +12,20 @@ public class CustomerDao {
     @Autowired
     JdbcTemplate jdbcTemplate;
 
-    public List<Customer> findAll() {
+    protected List<Customer> findAll() {
         return jdbcTemplate.query(
                 "SELECT id, first_name, last_name FROM customers",
                 (rs, rowNum) -> new Customer(rs.getLong("id"), rs.getString("first_name"), rs.getString("last_name"))
         );
+    }
+
+    protected Customer findWithFirstName(String firstName) {
+        List<Customer> cs = jdbcTemplate.query(
+                "select id, first_name, last_name from customers where first_name = ?",
+                (rs, rowNum) -> new Customer(rs.getLong("id"), rs.getString("first_name"), rs.getString("last_name")),
+                firstName
+        );
+        return cs.get(0);
     }
 
 }
