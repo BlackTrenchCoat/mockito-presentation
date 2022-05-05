@@ -37,7 +37,7 @@ class T02VerifyBehavior {
 
         Customer luna = new Customer(0, FIRST_NAME, "Lovegood");
 
-        when(mockedCustomerDao.findWithFirstName(FIRST_NAME)).thenReturn(luna);
+        when(mockedCustomerDao.findWithFirstName(eq(FIRST_NAME))).thenReturn(luna);
 
         Optional<Customer> actual = customerService.getCustomerWithFirstName(FIRST_NAME);
 
